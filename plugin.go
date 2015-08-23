@@ -30,7 +30,7 @@ func (p *Plugin) Add(op Operation) {
 	p.children = append(p.children, op)
 }
 
-// Children returns the list of operations 
+// Children returns the list of operations
 func (p *Plugin) Children() []Operation {
 	return p.children
 }

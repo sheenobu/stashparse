@@ -9,7 +9,7 @@ const (
 	OP_BRANCH  OperationType = "branch"
 )
 
-// Operation represents 
+// Operation represents
 type Operation interface {
 
 	// Type returns the OperationType of the Operation
@@ -29,7 +29,7 @@ type Operation interface {
 type Config struct {
 
 	// Input represents the Input section
-	Input  Operation
+	Input Operation
 
 	// Filter represeents the Filter section
 	Filter Operation
@@ -37,4 +37,3 @@ type Config struct {
 	// Output represents the Output section
 	Output Operation
 }
-

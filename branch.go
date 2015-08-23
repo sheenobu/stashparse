@@ -30,7 +30,7 @@ func (b *Branch) Add(op Operation) {
 	b.children = append(b.children, op)
 }
 
-// Children returns the list of operations 
+// Children returns the list of operations
 func (b *Branch) Children() []Operation {
 	return b.children
 }
@@ -46,4 +46,3 @@ func (b *Branch) Type() OperationType {
 func (b *Branch) Expression() string {
 	return b.expression
 }
-

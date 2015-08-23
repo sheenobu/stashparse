@@ -118,7 +118,11 @@ func (d *Decoder) Decode(config *Config) error {
 						if parserState.Can(tokenBuffer) {
 							parserState.Event(tokenBuffer)
 						} else {
-							if parserState.Can("driver") {
+							if tokenBuffer == "{}" {
+								parserState.Event("{")
+								parserState.Event("}")
+								tokenBuffer = ""
+							} else if parserState.Can("driver") {
 								l := NewPlugin(lastOp, tokenBuffer)
 								lastOp.Add(l)
 								lastOp = l
